@@ -104,8 +104,6 @@ namespace MissionPlanner.Controls
                 }
             }
 
-            setCameraControlPanelVisibility(preferences.ShowCameraControls);
-
             // Populate the list of keys that are expected to be pressed
             boundPressKeys.Clear();
             boundPressKeys.Add(preferences.TakePicture);
@@ -130,11 +128,6 @@ namespace MissionPlanner.Controls
             // Add relevant modifier keys
             boundHoldKeys.Add(mod2key[preferences.SlewFastModifier]);
             boundHoldKeys.Add(mod2key[preferences.SlewSlowModifier]);
-        }
-
-        private void setCameraControlPanelVisibility(bool visibility)
-        {
-            CameraLayoutPanel.Visible = visibility;
         }
 
         private void RenderFrame(object sender, MPBitmap image)
